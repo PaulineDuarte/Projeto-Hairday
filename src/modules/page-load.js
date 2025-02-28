@@ -1,3 +1,6 @@
+import { schedulesDay } from "./schedules/load"
+
+
 document.addEventListener("DOMContentLoaded", function () {
-    console.log("dom carregado")
+    schedulesDay()
 })
