@@ -6,6 +6,8 @@ const hours = document.getElementById("hours")
 
 export function hoursLoad ({date}) {
 
+    hours.innerHTML = ""
+
     const opening = openingHours.map((hour) => {
         //recuperar somente a hora 
         const [scheduleHour] = hour.split(":")
