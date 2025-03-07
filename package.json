@@ -4,8 +4,8 @@
   "author": "Pauline Duarte",
   "scripts": {
     "build": "webpack",
-    "dev": "webpack serve",
-    "server": "json-server --watch server.json --port 3333"
+    "dev": "webpack server",
+    "server": "json-server --watch server.json --port 3000"
   },
   "dependencies": {
     "dayjs": "^1.11.10",
