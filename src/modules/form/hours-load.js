@@ -9,9 +9,11 @@ export function hoursLoad ({date , dailySchedules}) {
     hours.innerHTML = ""
 
     // Obtém a lista de horários ocupados. 
-    const unavailableHours = dailySchedules.map((schedule)=>{
+    const unavailableHours = dailySchedules.map((schedule)=>
         dayjs(schedule.when).format("HH:mm")
-    })
+)
+
+    console.log(unavailableHours)
 
     const opening = openingHours.map((hour) => {
         //recuperar somente a hora 
@@ -25,17 +27,17 @@ export function hoursLoad ({date , dailySchedules}) {
         //define se o horario está disponivel 
         return {
             hour, 
-            available
+            available,
         }
 
     })
 
     // Renderizar os horarios
-    opening.forEach(({hour,availabe}) => {
+    opening.forEach(({hour,available}) => {
         const li = document.createElement("li")
 
         li.classList.add("hour")
-        li.classList.add(availabe ? "hour-available" : "hour-unavailable" )
+        li.classList.add(available ? "hour-available" : "hour-unavailable" )
 
         li.textContent = hour
 
